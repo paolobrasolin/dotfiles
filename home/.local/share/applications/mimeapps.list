@@ -1,0 +1,13 @@
+
+[Default Applications]
+x-scheme-handler/magnet=transmission-gtk.desktop
+application/ps=zathura.desktop
+application/eps=zathura.desktop
+application/pdf=zathura.desktop
+application/djvu=zathura.desktop
+text/html=google-chrome.desktop
+x-scheme-handler/http=google-chrome.desktop
+x-scheme-handler/https=google-chrome.desktop
+x-scheme-handler/about=google-chrome.desktop
+x-scheme-handler/unknown=google-chrome.desktop
+x-scheme-handler/mailto=google-chrome.desktop

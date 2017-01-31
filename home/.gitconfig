@@ -1,0 +1,5 @@
+[user]
+	email = paolo.brasolin@gmail.com
+	name = Paolo Brasolin
+[credential]
+	helper = cache --timeout=3600

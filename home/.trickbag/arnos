@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+if [ $# -gt  0 ]; then
+    find . -name $1 | entr context --nonstopmode --synctex /_
+elif [ -r main.tex ]; then
+    find . -name main.tex | entr context --nonstopmode --synctex /_
+else
+    find . -path '*.tex' | sort -r | entr context --nonstopmode --synctex /_
+fi

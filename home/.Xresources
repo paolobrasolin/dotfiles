@@ -1,0 +1,95 @@
+! #################################################################### Colours #
+
+! -----------------------------------------------------------------------------
+! File: gruvbox-light.xresources
+! Description: Retro groove colorscheme generalized
+! Author: morhetz <morhetz@gmail.com>
+! Source: https://github.com/morhetz/gruvbox-generalized
+! Last Modified: 6 Sep 2014
+! -----------------------------------------------------------------------------
+
+! hard contrast:
+*background: #f9f5d7
+! normal contrast:
+!*background: #fbf1c7
+! soft contrast: *background: #f2e5bc
+*foreground: #3c3836
+! Black + DarkGrey
+*color0:  #fdf4c1
+*color8:  #928374
+! DarkRed + Red
+*color1:  #cc241d
+*color9:  #9d0006
+! DarkGreen + Green
+*color2:  #98971a
+*color10: #79740e
+! DarkYellow + Yellow
+*color3:  #d79921
+*color11: #b57614
+! DarkBlue + Blue
+*color4:  #458588
+*color12: #076678
+! DarkMagenta + Magenta
+*color5:  #b16286
+*color13: #8f3f71
+! DarkCyan + Cyan
+*color6:  #689d6a
+*color14: #427b58
+! LightGrey + White
+*color7:  #7c6f64
+*color15: #3c3836
+
+! ######################################################################## Xft #
+
+! My Lenovo Thinkpad T60P has a 14 inches TFT screen with a native resolution
+! of 1400x1050 (optimal dpi = 125) and rgb subpixel layout. But it is dead.
+!Xft.dpi:            125
+!Xft.antialias:      true
+!Xft.rgba:           rgb
+!Xft.lcdfilter:      lcddefault
+!Xft.hinting:        true
+!Xft.hintstyle:      hintfull
+
+! My Lenovo Thinkpad T420 has a 14 inches TFT screen with a native resolution
+! of 1366x768 (optimal dpi = 112) and rgb subpixel layout.
+Xft.dpi:            112
+Xft.antialias:      true
+Xft.rgba:           rgb
+Xft.lcdfilter:      lcddefault
+Xft.hinting:        true
+Xft.hintstyle:      hintfull
+
+! ###################################################################### URxvt #
+
+!URxvt*background:        #000000
+!URxvt*foreground:        #babdb6
+
+! No scrollbar
+URxvt.scrollBar:         false
+! Fade to opaque black whe unfocused
+URxvt.fading:            10
+! Visual bell on, WM urgency hint on
+URxvt.urgentOnBell:      true
+URxvt.visualBell:        false
+! Load bash profile and history
+URxvt.loginShell:        true
+! Fonts
+URxvt.font:              xft:DejaVu Sans Mono:pixelsize=18
+URxvt.allow_bold:        true
+! Fix spacing
+URxvt*letterSpace:       -1
+! Disable Perl extensions
+URxvt.perlext:
+URxvt.perl-ext-common:
+! Blink cursor and hide pointer
+URxvt.cursorBlink:       true
+URxvt.pointerBlank:      true
+! Scroll behaviour in terminal
+URxvt.scrollTtyOutput:   false
+URxvt.scrollTtyKeypress: true
+URxvt.scrollWithBuffer:  true
+! Scroll behaviour in pagers
+URxvt.secondaryScreen:   true
+URxvt.secondaryScroll:   false
+URxvt.secondaryWheel:    true
+
