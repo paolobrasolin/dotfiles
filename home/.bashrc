@@ -162,6 +162,12 @@ export PATH="/usr/local/heroku/bin:$PATH"
 # touch
 
 
+# This guarantees that emacsclient starts a server if it's not running.
+export ALTERNATE_EDITOR=""
+
+
+
+
 
 
 

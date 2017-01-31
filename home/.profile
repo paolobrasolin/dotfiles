@@ -23,3 +23,6 @@ fi
 
 export LC_ALL=en_GB.UTF-8
 
+
+# emacs --daemon
+

@@ -51,6 +51,7 @@ myWorkspacesShift = [((mod4Mask .|. shiftMask, key), (windows $ W.shift ws))
 myKeys = [ ( (mod4Mask, xK_p), spawn myDmenu )
          , ( (mod4Mask, xK_b), sendMessage ToggleStruts )
          , ( (mod4Mask, xK_u), focusUrgent )
+         , ( (mod4Mask .|. shiftMask, xK_e ), spawn "emacsclient -c")
          ] ++ myWorkspacesFocus ++ myWorkspacesShift
 
 

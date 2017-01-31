@@ -10,6 +10,7 @@ alias v='gvim -v --servername vim'
 # welcome to the dark side
 alias e='emacsclient -c'
 
+
 alias z='zathura'
 
 # run local node module
