@@ -8,7 +8,7 @@ alias la='l --almost-all'
 alias v='gvim -v --servername vim'
 
 # welcome to the dark side
-alias e='emacsclient -c'
+alias e='emacsclient -t'
 
 
 alias z='zathura'

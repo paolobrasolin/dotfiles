@@ -1,0 +1,12 @@
+
+autofight_stop = 50
+
+auto_butcher = true
+auto_eat_chunks = true
+
+rest_wait_percent = 100
+explore_auto_rest = true
+
+autopickup_exceptions += <branded, <ego
+
+
