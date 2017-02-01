@@ -179,6 +179,7 @@ export ALTERNATE_EDITOR=""
 
 
 
+source ~/.liquidprompt/liquidprompt
 
 
 
