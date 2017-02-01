@@ -24,5 +24,9 @@ fi
 export LC_ALL=en_GB.UTF-8
 
 
-# emacs --daemon
+
+# TODO: https://www.emacswiki.org/emacs/EmacsAsDaemon
+#   Study the daemon script and write something more portable.
+
+# emacs --daemon &
 
