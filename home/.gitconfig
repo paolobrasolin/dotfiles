@@ -4,4 +4,5 @@
 [credential]
 	helper = cache --timeout=3600
 [core]
-	excludesfile = ~/.gitignore/Emacs.gitignore
+	excludesfile = /home/paolo/.gitignore/Emacs.gitignore
+	excludesfile = /home/paolo/.gitignore/Vim.gitignore

@@ -26,7 +26,10 @@ tramp
 *.rel
 
 # AUCTeX auto folder
-/auto/
+# this doesn't seem to cut it:
+#/auto/
+# let's try it this way:
+**/auto/*.el
 
 # cask packages
 .cask/
