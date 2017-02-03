@@ -62,12 +62,15 @@ values."
      syntax-checking
      ;; version-control
      colors
+     org
      )
    ;; List of additional packages that will be installed without being
    ;; wrapped in a layer. If you need some configuration for these
    ;; packages, then consider creating a layer. You can also put the
    ;; configuration in `dotspacemacs/user-config'.
-   dotspacemacs-additional-packages '()
+   dotspacemacs-additional-packages '(feature-mode
+                                      magic-latex-buffer
+                                      helm-ag)
    ;; A list of packages that cannot be updated.
    dotspacemacs-frozen-packages '()
    ;; A list of packages that will not be installed and loaded.
@@ -317,7 +320,10 @@ This is the place where most of your configurations should be done. Unless it is
 explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
   (setq tramp-ssh-controlmaster-options
-      "-o ControlMaster=auto -o ControlPath='tramp.%%C' -o ControlPersist=no")
+        "-o ControlMaster=auto -o ControlPath='tramp.%%C' -o ControlPersist=no")
+  ;; Default path for projects todo file, relative to project root
+  (setq-default dotspacemacs-configuration-layers
+                '((org :variables org-projectile-file "TODOs.org")))
   )
 
 ;; Do not write anything past this comment. This is where Emacs will

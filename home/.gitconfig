@@ -3,3 +3,5 @@
 	name = Paolo Brasolin
 [credential]
 	helper = cache --timeout=3600
+[core]
+	excludesfile = ~/.gitignore/Emacs.gitignore

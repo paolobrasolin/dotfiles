@@ -74,7 +74,7 @@ URxvt.visualBell:        false
 ! Load bash profile and history
 URxvt.loginShell:        true
 ! Fonts
-URxvt.font:              xft:DejaVu Sans Mono:pixelsize=18
+URxvt.font:              xft:DejaVu Sans Mono for Powerline:pixelsize=18
 URxvt.allow_bold:        true
 ! Fix spacing
 URxvt*letterSpace:       -1
