@@ -31,6 +31,7 @@ values."
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
    '(
+     php
      haskell
      html
      (ruby :variables ruby-enable-enh-ruby-mode t)
@@ -324,7 +325,31 @@ you should place your code here."
   ;; Default path for projects todo file, relative to project root
   (setq-default dotspacemacs-configuration-layers
                 '((org :variables org-projectile-file "TODOs.org")))
-  )
+
+  (defun fill-to-column (char column)
+    (interactive "cFill current line with character: \nnup to column: \n")
+    (save-excursion
+      (end-of-line)
+      (while (< (current-column) column) (insert-char char))))
+
+  (defun cut-to-column (column)
+    (interactive "nCut current line after column: \n")
+    (save-excursion
+      (end-of-line)
+      (while (> (current-column) column) (delete-backward-char 1))))
+
+  (defun col-to-length ()
+    (interactive)
+    (cut-to-column 80)
+    (fill-to-column ?= 80))
+
+  (global-set-key (kbd "<f5>") 'col-to-length)
+
+  (global-auto-revert-mode t)
+
+  (TeX-quote-after-quote nil)
+
+)
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
