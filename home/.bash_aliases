@@ -1,4 +1,5 @@
-# ls aliases
+#==[ ls aliases ]===============================================================
+
 alias l='ls -C --classify --group-directories-first --human-readable'
 alias ll='l -l'
 alias la='l --almost-all'
@@ -10,6 +11,8 @@ alias v='gvim -v --servername vim'
 # welcome to the dark side
 alias e='emacsclient -t'
 
+
+alias h='history | grep -e'
 
 alias z='zathura'
 

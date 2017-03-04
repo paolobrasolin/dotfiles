@@ -1,4 +1,0 @@
-#!/usr/bin/env bash
-
-find . -name $1 | entr latexmk --quiet --lualatex --synctex=1
-
