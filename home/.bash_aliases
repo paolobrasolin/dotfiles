@@ -15,3 +15,6 @@ alias z='zathura'
 
 # run local node module
 alias npm-run-local='PATH=$(npm bin):$PATH'
+
+# remove spaces from filenames in current folder
+alias nospace="find -name '* *' -type d -or -type f | rename 's/\ /_/g'"

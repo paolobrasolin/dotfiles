@@ -113,9 +113,10 @@ if [ -n "$DISPLAY" ]; then
 fi
 
 
-
+export GOROOT=$HOME/.go1.8
 export GOPATH=$HOME/.go
-export PATH=$GOPATH:$GOPATH/bin:$PATH
+export PATH=$GOPATH:$GOPATH/bin:$GOROOT:$GOROOT/bin:$PATH
+
 export PATH=~/.cabal/bin:$PATH
 
 # export TEXROOT=/texlive/2016
@@ -189,3 +190,8 @@ source ~/.liquidprompt/liquidprompt
 
 source "$HOME/.homesick/repos/homeshick/homeshick.sh"
 source "$HOME/.homesick/repos/homeshick/completions/homeshick-completion.bash"
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
+
+
