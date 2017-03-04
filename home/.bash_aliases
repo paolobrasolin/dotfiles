@@ -1,3 +1,5 @@
+#-*- mode: shell-script; -*-
+
 #==[ ls aliases ]===============================================================
 
 alias l='ls -C --classify --group-directories-first --human-readable'

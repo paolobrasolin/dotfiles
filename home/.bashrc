@@ -91,14 +91,17 @@ fi
 # colored GCC warnings and errors
 #export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
-# Alias definitions.
-# You may want to put all your additions into a separate file like
-# ~/.bash_aliases, instead of adding them here directly.
-# See /usr/share/doc/bash-doc/examples in the bash-doc package.
 
-if [ -f ~/.bash_aliases ]; then
-    . ~/.bash_aliases
-fi
+
+
+
+
+[ -f ~/.bash_functions ] && source ~/.bash_functions
+[ -f ~/.bash_aliases ] && source ~/.bash_aliases
+[ -f ~/.bash_paths ] && source ~/.bash_paths
+
+
+
 
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
@@ -117,85 +120,37 @@ if [ -n "$DISPLAY" ]; then
 fi
 
 
-export GOROOT=$HOME/.go1.8
-export GOPATH=$HOME/.go
-export PATH=$GOPATH:$GOPATH/bin:$GOROOT:$GOROOT/bin:$PATH
 
-export PATH=~/.cabal/bin:$PATH
 
-# export TEXROOT=/texlive/2016
-# export INFOPATH=$TEXROOT/texmf-dist/doc/info:$INFOPATH
-# export MANPATH=$TEXROOT/texmf-dist/doc/man:$MANPATH
-# export PATH=$TEXROOT/bin/x86_64-linux:$PATH
+
+
+
 
 export LC_ALL="en_GB.UTF-8"
 
-# PATH="/home/paolo/perl5/bin${PATH+:}${PATH}"; export PATH;
-# PERL5LIB="/home/paolo/perl5/lib/perl5${PERL5LIB+:}${PERL5LIB}"; export PERL5LIB;
-# PERL_LOCAL_LIB_ROOT="/home/paolo/perl5${PERL_LOCAL_LIB_ROOT+:}${PERL_LOCAL_LIB_ROOT}"; export PERL_LOCAL_LIB_ROOT;
-# PERL_MB_OPT="--install_base \"/home/paolo/perl5\""; export PERL_MB_OPT;
-# PERL_MM_OPT="INSTALL_BASE=/home/paolo/perl5"; export PERL_MM_OPT;
-
-# added by travis gem
-[ -f /home/paolo/.travis/travis.sh ] && source /home/paolo/.travis/travis.sh
-
-# added by Anaconda3 4.1.0 installer
-export PATH="/home/paolo/anaconda3/bin:$PATH"
 
 # Android
-export ANDROID_HOME="$HOME/Library/Android/sdk"
-export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
 # fix bug for non-reparenting windows managers (like xmonad)
 export _JAVA_AWT_WM_NONREPARENTING=1
-
-# JAVA_HOME=~/java/jdk1.8.0_112
-# PATH=$PATH:~/java/jdk1.8.0_112/bin
-# export JAVA_HOME
-# export PATH
-
-
-
-# STUFF
-export PATH="/home/paolo/.trickbag:$PATH"
-export PATH="/home/paolo/bin:$PATH"
-
-
-### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
-
-
-# touch
-
 
 # This guarantees that emacsclient starts a server if it's not running.
 export ALTERNATE_EDITOR=""
 
 
+# Source travis.
+maybe_source ~/.travis/travis.sh
 
-
-
-
-
-
-
-
-
-
-
-
-
+# Source liquidprompt.
 source ~/.liquidprompt/liquidprompt
 
+# Source homeshick.
+source ~/.homesick/repos/homeshick/homeshick.sh
+source ~/.homesick/repos/homeshick/completions/homeshick-completion.bash
 
 
 
 
 
 
-source "$HOME/.homesick/repos/homeshick/homeshick.sh"
-source "$HOME/.homesick/repos/homeshick/completions/homeshick-completion.bash"
-
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH="$PATH:$HOME/.rvm/bin"
 
 
