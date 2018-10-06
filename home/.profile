@@ -17,18 +17,12 @@ if [ -n "$BASH_VERSION" ]; then
 fi
 
 # set PATH so it includes user's private bin if it exists
-if [ -d "$HOME/bin" ] ; then
-    PATH="$HOME/bin:$PATH"
-fi
+[ -d "$HOME/bin" ] && PATH="$HOME/bin:$PATH"
+
 
 export LC_ALL=en_GB.UTF-8
 
 
-
-# TODO: https://www.emacswiki.org/emacs/EmacsAsDaemon
-#   Study the daemon script and write something more portable.
-
-# emacs --daemon &
 
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.

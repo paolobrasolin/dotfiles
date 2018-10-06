@@ -1,15 +1,19 @@
 #-*- mode: shell-script; -*-
 
-export GOROOT=$HOME/.go1.8
-export GOPATH=$HOME/.go
-export PATH=$GOPATH:$GOPATH/bin:$GOROOT:$GOROOT/bin:$PATH
+export GOROOT=~/.go1.8
+export GOPATH=~/.go
+
+maybe_export_path $GOPATH
+maybe_export_path $GOPATH/bin
+maybe_export_path $GOROOT
+maybe_export_path $GOROOT/bin
 
 export PATH=~/.cabal/bin:$PATH
 
-# export TEXROOT=/texlive/2016
-# export INFOPATH=$TEXROOT/texmf-dist/doc/info:$INFOPATH
-# export MANPATH=$TEXROOT/texmf-dist/doc/man:$MANPATH
-# export PATH=$TEXROOT/bin/x86_64-linux:$PATH
+export TEXROOT=/texlive/2017
+export INFOPATH=$TEXROOT/texmf-dist/doc/info:$INFOPATH
+export MANPATH=$TEXROOT/texmf-dist/doc/man:$MANPATH
+export PATH=$TEXROOT/bin/x86_64-linux:$PATH
 
 # PATH="/home/paolo/perl5/bin${PATH+:}${PATH}"; export PATH;
 # PERL5LIB="/home/paolo/perl5/lib/perl5${PERL5LIB+:}${PERL5LIB}"; export PERL5LIB;
@@ -17,12 +21,12 @@ export PATH=~/.cabal/bin:$PATH
 # PERL_MB_OPT="--install_base \"/home/paolo/perl5\""; export PERL_MB_OPT;
 # PERL_MM_OPT="INSTALL_BASE=/home/paolo/perl5"; export PERL_MM_OPT;
 
-# added by Anaconda3 4.1.0 installer
-export PATH="/home/paolo/anaconda3/bin:$PATH"
+maybe_export_path ~/anaconda3/bin
 
 # Android
-export ANDROID_HOME="$HOME/Library/Android/sdk"
-export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
+export ANDROID_HOME="~/Library/Android/sdk"
+maybe_export_path $ANDROID_HOME/tools
+maybe_export_path $ANDROID_HOME/platform-tools
 
 # JAVA_HOME=~/java/jdk1.8.0_112
 # PATH=$PATH:~/java/jdk1.8.0_112/bin
@@ -31,15 +35,9 @@ export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
 
 
 
-# STUFF
-export PATH="/home/paolo/.trickbag:$PATH"
-export PATH="/home/paolo/bin:$PATH"
+maybe_export_path ~/.trickbag
+maybe_export_path ~/bin
+maybe_export_path /usr/local/heroku/bin
 
-
-### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
-
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH="$PATH:$HOME/.rvm/bin"
-
+maybe_export_path ~/.rvm/bin
 

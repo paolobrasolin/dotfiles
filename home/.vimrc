@@ -3,15 +3,15 @@
 set nocompatible             " be iMproved, required
 "filetype off                 " required
 
-call plug#begin('~/.vim/plugged')
+" call plug#begin('~/.vim/plugged')
 
-Plug 'thinca/vim-localrc'
+" Plug 'thinca/vim-localrc'
 
-Plug 'scrooloose/syntastic'
+" Plug 'scrooloose/syntastic'
 
 " syntax highlighting
-Plug 'jelera/vim-javascript-syntax'
-Plug 'pangloss/vim-javascript'
+" Plug 'jelera/vim-javascript-syntax'
+" Plug 'pangloss/vim-javascript'
 
 "Plug 'nathanaelkane/vim-indent-guides'
 
@@ -21,7 +21,7 @@ Plug 'pangloss/vim-javascript'
 "Plug 'scrooloose/syntastic'
 "Plug 'mtscout6/syntastic-local-eslint.vim'
 
-Plug 'morhetz/gruvbox'
+" Plug 'morhetz/gruvbox'
 
 " Plug 'maksimr/vim-jsbeautify'
 
@@ -32,7 +32,7 @@ Plug 'morhetz/gruvbox'
 
 " Plug 'tpope/vim-surround'
 
-call plug#end()
+" call plug#end()
 
 "filetype plugin indent on    " required
 " To ignore plugin indent changes, instead use:
@@ -85,10 +85,10 @@ let g:syntastic_ruby_checkers          = ['rubocop', 'mri']
 
 "=====[ colorscheme ]===========================================================
 
-colorscheme gruvbox
-set background=light
-let g:gruvbox_contrast_dark="hard"
-let g:gruvbox_contrast_light="hard"
+" colorscheme gruvbox
+" set background=light
+" let g:gruvbox_contrast_dark="hard"
+" let g:gruvbox_contrast_light="hard"
 
 "=====[ show leader ]===========================================================
 

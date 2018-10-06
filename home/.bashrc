@@ -8,19 +8,21 @@ case $- in
       *) return;;
 esac
 
-# don't put duplicate lines or lines starting with space in the history.
-# See bash(1) for more options
-HISTCONTROL=ignoreboth
 
-# append to the history file, don't overwrite it
+
+
+# Append to the history file, don't overwrite it. (Should be default.)
 shopt -s histappend
-
 # Set session history size to unlimited.
 HISTSIZE=
 # Set persistent history size to unlimited.
 HISTFILESIZE=
-# Store no duplicates.
-HISTCONTROL=erasedups
+# Don't store commands with leading spaces. Store no duplicates.
+HISTCONTROL=ignorespace:ignoredups
+# PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
+
+
+
 
 
 # check the window size after each command and, if necessary,
@@ -138,19 +140,22 @@ export ALTERNATE_EDITOR=""
 
 
 # Source travis.
-maybe_source ~/.travis/travis.sh
+maybe_source_script ~/.travis/travis.sh
 
 # Source liquidprompt.
-source ~/.liquidprompt/liquidprompt
+maybe_source_script ~/.liquidprompt/liquidprompt
 
 # Source homeshick.
-source ~/.homesick/repos/homeshick/homeshick.sh
-source ~/.homesick/repos/homeshick/completions/homeshick-completion.bash
+maybe_source_script ~/.homesick/repos/homeshick/homeshick.sh
+maybe_source_script ~/.homesick/repos/homeshick/completions/homeshick-completion.bash
+
+# Source rvm. (Loaded as function.)
+# maybe_source_script "$HOME/.rvm/scripts/rvm"
+
+# [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" 
 
 
 
 
-
-
-
-
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
