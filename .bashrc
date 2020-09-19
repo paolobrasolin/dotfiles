@@ -15,14 +15,14 @@ alias metanorma='docker run -v "$(pwd)":/metanorma/ -w /metanorma metanorma/meta
 
 # [ -f "$(mnogootex mnogoo)" ] && . "$(mnogootex mnogoo)"
 
-[ -f "$HOME/.fzf.bash" ] && . "$HOME/.fzf.bash"
+# [ -f "$HOME/.fzf.bash" ] && . "$HOME/.fzf.bash"
 
 [ -f "${HOME}/.iterm2_shell_integration.bash" ] && . "${HOME}/.iterm2_shell_integration.bash"
 
 # Only load Liquid Prompt in interactive shells, not from a script or from scp
 [[ $- = *i* ]] && . "$HOME/.liquidprompt/liquidprompt"
 
-[ -f "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"
+[ -f "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh" --no-use
 
 [ -f "$HOME/.rvm/scripts/rvm" ] && . "$HOME/.rvm/scripts/rvm"
 
