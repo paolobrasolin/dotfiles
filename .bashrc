@@ -12,6 +12,7 @@ alias be="bundle exec"
 alias berk="bundle exec rake"
 alias bers="bundle exec rails"
 alias metanorma='docker run -v "$(pwd)":/metanorma/ -w /metanorma metanorma/metanorma metanorma'
+alias dotfiles='/usr/bin/git --git-dir=$HOME/.cfg--dotfiles/ --work-tree=$HOME'
 
 # [ -f "$(mnogootex mnogoo)" ] && . "$(mnogootex mnogoo)"
 
