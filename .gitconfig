@@ -1,0 +1,12 @@
+[core]
+	excludesfile = /Users/paolobrasolin/.gitignore
+[alias]
+	logline = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+	locstat = "!git ls-files -z  \"$@\" | parallel --no-notice --null git blame -w -M -C -C --line-porcelain | LC_CTYPE=C sed -n 's/^author //p' | sort -i | uniq -ic | sort -nr #"
+	feature-create = "!f(){ git checkout development && git pull && git checkout -b \"$1\" && git push --set-upstream origin \"$1\"; };f"
+	feature-rebase = "!f(){ git checkout development && git pull && git checkout \"$1\" && git rebase development && git push --force; };f"
+	delete-merged = "!git branch --merged | grep  -v '\\*\\|master\\|develop' | xargs -n 1 git branch -d"
+[http]
+	postBuffer = 157286400
+[user]
+	name = Paolo Brasolin
