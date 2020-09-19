@@ -1,46 +1,47 @@
-# NOTE: .bashrc is executed for interactive non-login shells
-
-# The individual per-interactive-shell startup file
-
-PATH="/Users/paolobrasolin/perl5/bin${PATH:+:${PATH}}"; export PATH;
-PERL5LIB="/Users/paolobrasolin/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
-PERL_LOCAL_LIB_ROOT="/Users/paolobrasolin/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
-PERL_MB_OPT="--install_base \"/Users/paolobrasolin/perl5\""; export PERL_MB_OPT;
-PERL_MM_OPT="INSTALL_BASE=/Users/paolobrasolin/perl5"; export PERL_MM_OPT;
-
-export PATH=$PATH:$HOME/esp/xtensa-esp32-elf/bin
-export IDF_PATH=~/esp/esp-idf
-
-# added by Anaconda3 5.0.0 installer
-# export PATH="/Users/paolobrasolin/anaconda3/bin:$PATH"
 # shellcheck shell=bash
-
-# export GOPATH=$HOME/go
-# export GOBIN=$GOPATH/bin
-# export PATH=$PATH:$GOBIN
-
-export PATH=$PATH:/usr/local/sbin
-
-export NVM_DIR="$HOME/.nvm"
-
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
-
-# source $HOME/.asdf/asdf.sh
-# source $HOME/.asdf/completions/asdf.bash
-
-export HISTSIZE=10000
-export HISTFILESIZE=10000
-# append, don't overwrite
-shopt -s histappend
-# save history on each prompt
-# PROMPT_COMMAND='$PROMPT_COMMAND; history -a'
 
 export EDITOR=vim
 
-export PATH=$PATH:~/Library/Haskell/bin
+export HISTSIZE=10000
+export HISTFILESIZE=10000
+shopt -s histappend # append, don't overwrite
+# PROMPT_COMMAND='$PROMPT_COMMAND; history -a' # save history on each prompt
 
+alias t="$HOME/.rvm/gems/ruby-2.7.0/bin/timetrap"
+alias be="bundle exec"
+alias berk="bundle exec rake"
+alias bers="bundle exec rails"
 alias metanorma='docker run -v "$(pwd)":/metanorma/ -w /metanorma metanorma/metanorma metanorma'
 
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH="$PATH:$HOME/.rvm/bin"
+# [ -f "$(mnogootex mnogoo)" ] && . "$(mnogootex mnogoo)"
 
+[ -f "$HOME/.fzf.bash" ] && . "$HOME/.fzf.bash"
+
+[ -f "${HOME}/.iterm2_shell_integration.bash" ] && . "${HOME}/.iterm2_shell_integration.bash"
+
+# Only load Liquid Prompt in interactive shells, not from a script or from scp
+[[ $- = *i* ]] && . "$HOME/.liquidprompt/liquidprompt"
+
+[ -f "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"
+
+[ -f "$HOME/.rvm/scripts/rvm" ] && . "$HOME/.rvm/scripts/rvm"
+
+[ -f "$HOME/google-cloud-sdk/path.bash.inc" ] && . "$HOME/google-cloud-sdk/path.bash.inc"
+[ -f "$HOME/google-cloud-sdk/completion.bash.inc" ] && . "$HOME/google-cloud-sdk/completion.bash.inc"
+
+# added by Anaconda2 2019.07 installer
+# >>> conda init >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$(CONDA_REPORT_ERRORS=false '/anaconda2/bin/conda' shell.bash hook 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    \eval "$__conda_setup"
+else
+    if [ -f "/anaconda2/etc/profile.d/conda.sh" ]; then
+        . "/anaconda2/etc/profile.d/conda.sh"
+        CONDA_CHANGEPS1=false conda activate base
+    else
+        \export PATH="/anaconda2/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda init <<<
