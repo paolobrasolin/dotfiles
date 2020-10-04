@@ -16,7 +16,7 @@ alias dotfiles='/usr/bin/git --git-dir=$HOME/.cfg--dotfiles/ --work-tree=$HOME'
 
 # [ -f "$(mnogootex mnogoo)" ] && . "$(mnogootex mnogoo)"
 
-# [ -f "$HOME/.fzf.bash" ] && . "$HOME/.fzf.bash"
+[ -f "$HOME/.fzf.bash" ] && . "$HOME/.fzf.bash"
 
 [ -f "${HOME}/.iterm2_shell_integration.bash" ] && . "${HOME}/.iterm2_shell_integration.bash"
 
