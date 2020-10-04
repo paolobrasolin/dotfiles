@@ -27,6 +27,8 @@ alias dotfiles='/usr/bin/git --git-dir=$HOME/.cfg--dotfiles/ --work-tree=$HOME'
 
 [ -f "$HOME/.rvm/scripts/rvm" ] && . "$HOME/.rvm/scripts/rvm"
 
+[ -f "/Users/paolobrasolin/.ghcup/env" ] && . "/Users/paolobrasolin/.ghcup/env"
+
 [ -f "$HOME/google-cloud-sdk/path.bash.inc" ] && . "$HOME/google-cloud-sdk/path.bash.inc"
 [ -f "$HOME/google-cloud-sdk/completion.bash.inc" ] && . "$HOME/google-cloud-sdk/completion.bash.inc"
 

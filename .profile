@@ -20,10 +20,11 @@ export PATH="${PATH:+${PATH}:}$HOME/esp/xtensa-esp32-elf/bin"
 export IDF_PATH=$HOME/esp/esp-idf
 
 export PATH="${PATH:+${PATH}:}/usr/local/sbin"
+export PATH="${PATH:+${PATH}:}$HOME/.local/bin"
 
 export NVM_DIR="$HOME/.nvm"
 
-export PATH="${PATH:+${PATH}:}$HOME/Library/Haskell/bin"
+# export PATH="${PATH:+${PATH}:}$HOME/Library/Haskell/bin"
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="${PATH:+${PATH}:}$HOME/.rvm/bin"
